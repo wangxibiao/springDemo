@@ -8,7 +8,7 @@
     <bean id="userInfoSetter" class="com.wong.model.UserInfo">
         <property name="name" value="setter name"></property>
     </bean>
-    <!-- 构造 注入-->
+    <!-- 构造注入-->
     <bean id="userInfoConstrutor" class="com.wong.model.UserInfo">
         <constructor-arg index="0" value="1"></constructor-arg>
         <constructor-arg index="1" value="constructor name"></constructor-arg>
