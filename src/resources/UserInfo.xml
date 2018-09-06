@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- setter 注入-->
+    <bean id="userInfoSetter" class="com.wong.model.UserInfo">
+        <property name="name" value="setter name"></property>
+    </bean>
+    <!-- 构造 注入-->
+    <bean id="userInfoConstrutor" class="com.wong.model.UserInfo">
+        <constructor-arg index="0" value="1"></constructor-arg>
+        <constructor-arg index="1" value="constructor name"></constructor-arg>
+    </bean>
+    <!-- 静态工厂注入-->
+    <bean id="userInfoStaticFactory" class="com.wong.common.StaticFactory" factory-method="staticFactory">
+        <constructor-arg index="0" value="88"></constructor-arg>
+        <constructor-arg index="1" value="staticfactory name"></constructor-arg>
+    </bean>
+    <!-- 实例工厂注入-->
+    <bean id="instanceFactoryBean" class="com.wong.common.InstanceFactory"></bean>
+    <bean id="instanceFactory" factory-bean="instanceFactoryBean" factory-method="getUserInfoInstanceFactory">
+        <constructor-arg index="0" value="99"></constructor-arg>
+        <constructor-arg index="1" value="instancefactory name"></constructor-arg>
+    </bean>
+</beans>

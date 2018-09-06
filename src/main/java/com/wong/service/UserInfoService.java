@@ -1,4 +1,11 @@
 package com.wong.service;
 
-public class UserInfoService {
+public interface UserInfoService {
+    void getUserInfo();
+
+    void getUserInfoConstrutor();
+
+    void getUserInfoStaticFactory();
+
+    void getUserInfoInstanceFactory();
 }
