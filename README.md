@@ -1,4 +1,3 @@
 # springDemo
-spring demo maven mybatis
 
-ttt
+基于maven搭建的spring示例。
